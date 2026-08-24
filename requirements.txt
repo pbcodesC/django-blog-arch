@@ -1,5 +1,6 @@
-crispy-bootstrap4
 Django==4.1.7
 django-crispy-forms
+crispy-bootstrap4
 Pillow
 gunicorn
+whitenoise
