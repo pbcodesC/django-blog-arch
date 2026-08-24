@@ -1,5 +1,7 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from django.urls import path
-from . import views
+from .import views
 
 urlpatterns = [
     path('', views.dashboard, name='dashboard'),
@@ -19,3 +21,5 @@ urlpatterns = [
     path('users/edit/<int:pk>/', views.edit_user, name='edit_user'),
     path('users/delete/<int:pk>/', views.delete_user, name='delete_user'),
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
