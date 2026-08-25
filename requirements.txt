@@ -1,4 +1,5 @@
 crispy-bootstrap4
-Django
+Django==4.1.7
 django-crispy-forms
 Pillow
+gunicorn
